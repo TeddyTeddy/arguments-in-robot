@@ -122,14 +122,14 @@ Run Program (version one)
 Run Program (version two)
     [Arguments]     ${arg}
     Log    ${arg}
-    Run Process     python /home/hakan/Python/Robot/arguments-in-robot/Tests/program.py arg1     shell=${arg}
+    Run Process     python /home/hakan/Python/Robot/arguments-in-robot/Tests/program.py     shell=${arg}
 
 Run Program (version three)
     [Documentation]  If keyword needs to accept and pass forward any named arguments, it must be changed
     ...              to accept free named arguments. Compare it with "Run Program (version one/two)"
     [Arguments]      &{named}  # a free named argument
     Log    ${named}
-    Run Process      python /home/hakan/Python/Robot/arguments-in-robot/Tests/program.py arg1     &{named}
+    Run Process      python /home/hakan/Python/Robot/arguments-in-robot/Tests/program.py     &{named}
 
 Keyword With Named Arguments
     [Arguments]    ${arg1}=first   ${arg2}=second
